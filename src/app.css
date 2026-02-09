@@ -875,7 +875,7 @@ a {
 }
 
 .teamHeading {
-	font-size: 2.6rem;
+	font-size: 3.6rem;
 	font-weight: 700;
 	color: #243447;
 	margin-bottom: 20px;
@@ -895,7 +895,7 @@ a {
 .teamButtons {
 	display: inline-flex;
 	background: #e9edf5;
-	padding: 6px;
+	padding: 8px;
 	border-radius: 40px;
 	margin: 25px 0 50px;
 	gap: 6px;
@@ -906,7 +906,7 @@ a {
 	background: transparent;
 	padding: 10px 22px;
 	border-radius: 30px;
-	font-size: 0.95rem;
+	font-size: 1.0rem;
 	font-weight: 600;
 	color: #4a5a70;
 	cursor: pointer;
@@ -931,14 +931,14 @@ a {
 	flex-wrap: wrap;
 	justify-content: center;
 	/* centers last row automatically */
-	gap: 40px;
-	max-width: 1100px;
+	gap: 50px;
+	max-width: 1500px;
 	margin: 50px auto 0;
 	padding: 0 20px;
 }
 
 .teamCard {
-	width: 280px;
+	width: 380px;
 	/* increased size */
 	background: #ffffff;
 	border-radius: 22px;
@@ -981,9 +981,9 @@ a {
 
 
 .cardMiddle img {
-	width: 150px;
+	width: 250px;
 	/* bigger image */
-	height: 150px;
+	height: 250px;
 	object-fit: cover;
 	border-radius: 50%;
 	margin: 26px 0;
@@ -999,13 +999,13 @@ a {
 }
 
 .cardName {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	font-weight: 600;
 	color: #243447;
 }
 
 .cardDesignation {
-	font-size: 0.8rem;
+	font-size: 1.0rem;
 	letter-spacing: 1.3px;
 	text-transform: uppercase;
 	color: #6a7a90;
@@ -1041,13 +1041,13 @@ a {
 .overlay a {
 	color: #2f54eb;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 500;
 }
 
 .overlay p {
 	margin-top: 8px;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	color: #1f2d3d;
 	font-weight: 500;
 }
@@ -1147,130 +1147,100 @@ a {
    ==================================================== */
 
 .footerMain {
-	background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
-	margin-top: 10vh;
+	background: #eef2f7;
+	padding:  4vw;
+}
+
+/* Wider container */
+.footerContainer {
+	max-width: 1400px;   /* increased from 1100 */
+	margin: 0 auto;
 	display: flex;
-	padding: 12vh 10vw;
-	position: relative;
-	overflow: hidden;
+	gap: 200px;
+	align-items: stretch;
 	justify-content: space-between;
-	padding-bottom: 12vh;
-	border-top: 1px solid rgba(212, 165, 116, 0.2);
 }
 
-.footerMain::before {
-	content: '';
-	position: absolute;
-	top: -50%;
-	left: -10%;
-	width: 600px;
-	height: 600px;
-	background: radial-gradient(circle, rgba(212, 165, 116, 0.05) 0%, transparent 70%);
-	border-radius: 50%;
-	pointer-events: none;
-}
-
-.footerLine {
-	width: 2px;
-	height: 10vh;
-	background: linear-gradient(180deg, var(--accent-warm), transparent);
-	opacity: 0.5;
-}
-
+/* Contact Card */
 .leftSection {
+	flex: 1;
+	background: #ffffff;
+	padding: 60px;              /* increased padding */
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Map Section */
+.rightSection {
+	flex: 1.4;                  /* give map more width */
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	flex: 1;
-	position: relative;
-	z-index: 1;
 }
 
-.topLeftSection {
-	border: 2px solid var(--accent-warm);
-	padding: 2rem;
-	margin-bottom: 5vh;
-	z-index: 50;
-	border-radius: 12px;
-	backdrop-filter: blur(8px);
-	background: rgba(255, 255, 255, 0.05);
-	transition: all 0.4s ease;
+/* Headings */
+.footerHead {
+	font-size: 2.8rem;          /* bigger heading */
+	font-weight: 700;
+	color: #1f2d3d;
+	margin-bottom: 25px;
 }
 
-.topLeftSection:hover {
-	background: rgba(255, 255, 255, 0.1);
-	box-shadow: var(--shadow-sm);
-}
-
+/* Text */
 .topLeftSection p {
-	font-weight: 400;
-	font-size: 1.1rem;
+	color: #5a6a7a;
 	line-height: 1.8;
-	letter-spacing: 0.3px;
-	color: rgba(255, 255, 255, 0.9);
-	margin-bottom: 1rem;
+	margin: 10px 0;
+	font-size: 1.50rem;         /* slightly larger text */
+}
+
+.topLeftSection a {
+	color: #2b6cb0;
+	text-decoration: none;
+	font-weight: 500;
 }
 
 .bottomLeftSection {
-	position: relative;
-	z-index: 1;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 
-.bottomLeftSection p {
+.bottomLeftSection a {
+	color: #1f2d3d;
 	font-weight: 500;
-	font-size: 1.05rem;
-	line-height: 1.8;
-	letter-spacing: 0.3px;
-	padding: 0.5rem 0;
-	margin: 1rem 0;
-	color: rgba(255, 255, 255, 0.85);
-	transition: all 0.3s ease;
+	text-decoration: none;
 }
 
-.bottomLeftSection p:hover {
-	color: var(--accent-warm);
+/* Map Card */
+.mapWrapper {
+	background: #ffffff;
+	padding: 16px;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
-.rightSection {
-	border: 2px solid var(--accent-warm);
-	padding: 2rem;
-	width: 35vw;
-	border-radius: 12px;
-	backdrop-filter: blur(8px);
-	background: rgba(255, 255, 255, 0.05);
-	position: relative;
-	z-index: 1;
-}
-
-iframe {
-	border: none;
+.mapWrapper iframe {
 	width: 100%;
-	height: 65vh;
-	border-radius: 8px;
+	height: 520px;   /* increased height */
+	border: none;
+	border-radius: 14px;
 }
 
-.footerHead {
-	font-family: "Lexend";
-	font-weight: 700;
-	font-size: 3rem;
-	line-height: 1.2;
-	letter-spacing: -0.02em;
-	color: var(--accent-warm);
-	margin-bottom: 1rem;
-}
+/* Responsive */
+@media (max-width: 1000px) {
+	.footerContainer {
+		flex-direction: column;
+		gap: 50px;
+	}
 
-.footerTopBg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(-50%, -50%);
-}
+	.leftSection {
+		padding: 40px;
+	}
 
-.footerBottomBg {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	transform: translateY(50%);
+	.mapWrapper iframe {
+		height: 320px;
+	}
 }
 
 /* ====================================================
